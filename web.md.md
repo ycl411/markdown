@@ -1579,3 +1579,141 @@ https://developers.google.cn/youtube/iframe_api_reference?hl=ko
 ​	 });
 
 ​	}
+
+# CSS용어
+
+- ::before 라는 요소는 content라는 요소가 필요함
+
+- img 요소가 display:block + margin :0 auto 인 경우 width 속성이 없이도 가운데 정렬이 가능합니다.
+  우리는 현재 프로젝트에서 img 요소에 display:block 을 지정했습니다.
+
+
+
+
+
+
+
+
+
+# github사용방법
+
+### 버전관리
+
+- 깃 (사용자  로컬) 
+
+**#개행 문자 (Newline) 설정**
+
+**##macOS**
+
+- git config --global core.autocrlf input
+
+#####  ##windows
+
+- git config --global core.autocrlf true
+
+**#사용자 정보**
+
+##### 커밋(버전생성)을 위한 정보 등록
+
+- git config --global user.name 'YOUR_NAME'
+- git config --global user.nemail 'YOUR_MAEIL'
+
+##### #구성확인
+
+##### **Q키를 눌러서 종료!**
+
+- git config --global --list
+
+
+
+**#현재 프로젝트에서 변경사항 추적(버전 관리)을 시작.**
+
+- git init
+
+**#변경사항을 추적할 특정 파일(index.html)을 지정**
+
+- git add index.html
+
+**#모든 파일의 변경사항을 추적하도록 지정.**
+
+- git add .
+
+**#메세지(-m)와 함께 버전을 생성**
+
+- git commit -m '프로젝트 생성'
+
+**#origin이란 별칭으로 원격 저장소를 연결**
+
+- git remote add origin https://github.c.....주소
+
+**#origin이란 별칭의 원격 저장소로 버전 내역 전송.**
+
+- git push origin master
+
+
+
+
+
+# 버전 업로드
+
+**git status**
+
+**git add .** 
+**git status**
+
+**git commit -m '수정 내용'**
+
+
+
+**git log (확인하기)**
+
+REDME.md 
+
+
+
+git push origin master (깃헙에 저장소에 보내기)
+
+
+
+# 로그인 브렌치(branch)
+
+- **git checkout master / signin** 
+
+
+
+### 로그인 페이지 개발
+
+- common.js (공통적으로 사용된 js)
+
+
+
+# 프로젝트 복제
+
+터미널에서 dir 작성.
+
+cd desk + tab  누르고 엔터
+
+그러면 데스크탑에 적용됨
+
+dir을 다시 친다.
+
+cd .. 작성하면 데스크탑의 바깥쪽 폴더로 나가짐.
+
+git clone https://github.com/ycl411/starbucks.git (복사한 주소) 엔터
+
+dir 엔터
+
+터미널에서 여는 방법
+
+- 컨트롤 쉬프트 p (모든명령실행)
+- code 명령 설치 (shell command: install 'code' command in path)
+- path에 code 설치 목록이 없으면 설치.
+
+cd starbucks
+
+code .
+
+code . -r (현재 창에서 열어주는 것)
+
+
+
