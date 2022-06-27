@@ -1,3 +1,9 @@
+# 타이포라 사용 방법
+
+[타이포라 사용방법 ](https://green-study.tistory.com/3523)
+
+
+
 모든 명령 표시(에디터의 모든 명령에 접근)
 
 - 맥 : cmd + shift + p
@@ -1706,7 +1712,7 @@ dir 엔터
 터미널에서 여는 방법
 
 - 컨트롤 쉬프트 p (모든명령실행)
-- code 명령 설치 (shell command: install 'code' command in path)
+- code 명령 설치 (shell command: install 'code' command in path)Part 3. JavaScript Essentials
 - path에 code 설치 목록이 없으면 설치.
 
 cd starbucks
@@ -1717,3 +1723,108 @@ code . -r (현재 창에서 열어주는 것)
 
 
 
+
+
+# **Part 3. JavaScript Essentials**
+
+### node.js
+
+> LTS는 장기적으로 안정되고 신뢰도가 높은 지원이 보장되는 버전 , 유지/보수(서버 운영 등) 에 초점을 맞춰 대부분 사용자에게 추천되는 버전
+
+> [nvm node.js 설치 ](https://github.com/coreybutler/nvm-windows/releases)
+>
+> 1. download를 찾아서 nvm-setup.zip을 다운설치 하면됨.
+> 2. vscode 터미널에서 nvm --version 이라고 쳐서 오류 안뜨면 설치완료.
+
+
+
+### npm 개요
+
+> 1. 폴더생성 -> 터미널에서  npm - init -y  ->package.json 이 뜰것임.
+>
+> 2. npm install parcel-bundler -D 설치.
+> 3.  node_modules 폴더 / package.-lock.json이 생성된다.
+> 4. npm install lodash 설치
+> 5. node_modules 를  설치할 때 npm i 라고 쳐도 된다.
+
+
+
+### parcel-bundler
+
+> package.js에 scripts 밑에 test ~라고 되어있는데 삭제하고
+>
+> "dev" :"parcel index.html" 이라고 적어준다.
+>
+> 개발용 의존용 패키지로  우리 내부에 프로젝트에만 적용된 것이기 때문에
+>
+> 우리 프로젝트의 scripts에 옵션에 명령을 적어주면, 우리 프로젝트의 내부에서만 동작하는 것으로 인식 시켜주는 것이고 대신에 그 명령어를 dev명령어로 실행 해주는 것.
+>
+> ***우리 환경에 개발서버를 열겠다 라는 명령어***
+>
+> npm run dev 명령어를 터미널에 적어준다.
+
+
+
+### dist (실제 웹사이트가 동작한다.)
+
+"build":"parcel build index.html 
+
+번들(bundle) 은 우리가 프로젝트 개발에 사용한 여러 모듈(패키지)을 하나로 묶어내는 작업을 말합니다.
+
+
+
+### lodash
+
+> import _ from 'lodash'; 명령어는
+>
+> _ 안에 lodash라는 js를 사용하겠다 라는 것이다.
+>
+> console.log('hello world');
+>
+> console.log(_.camelCase('hello world'));
+>
+> ***즉, _(lodash)안에 있는 js파일 중 .camelCase(메소드)라는  js파일을  'hello world' 문자데이터를 넣어주면***
+>
+> ***hello world라는 문자가 camelCase라는 방식으로 변경이 되서 반환이 되서 콘솔에 출력하는 것.***
+>
+> 
+
+
+
+### 유익적 버전(Major.Minor.Patch)
+
+> 12.14.1 (16.15.1)
+>
+> Major : 12 [기존 버전과 호환되지 않는 새로운 버전] 
+>
+> Minor : 14 [기존 버전과 호환되는 새로운 기능이 추가된 버전]
+>
+> Patch : 1 [기존 버전과 호환되는 버그 및 오타 등이 수정된 버전]
+>
+> *맨 앞에 ^ 이 있으면 Major 버전안에서 가장 최신 버전으로 업데이트 가능 이라는 것.*
+>
+> 
+>
+> npm info lodash 버전 확인하는 방법.
+>
+> npm install lodash@다운 버전 
+>
+> npm update lodash 업그레이드 버전
+> ^ 기호를 지우면 버전을 업그레이드 안됨.
+
+
+
+### npm 주의사항
+
+> .gitignore 파일을 만들고
+> .cache/
+> dist/
+>
+> node_modules/ 
+>
+> 명령어를 입력하고 저장한 다음
+>
+> 터미널에 git init 라고 치면 3개의 명령어는 어둡게 변해서 버전관리가 따로 되지 않는다.
+>
+> 
+> 
