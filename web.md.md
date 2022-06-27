@@ -1825,6 +1825,101 @@ code . -r (현재 창에서 열어주는 것)
 > 명령어를 입력하고 저장한 다음
 >
 > 터미널에 git init 라고 치면 3개의 명령어는 어둡게 변해서 버전관리가 따로 되지 않는다.
+
+
+
+
+
+
+
+# ECMA javascript 
+
+- es라고도 부름.
+
+> npm init -y
+>
+> npm i parcel-bundler -D
+>
+> npm run dev (개발서버 오픈)
+
+
+
+- typeof 키워드를 넣으면 데이터의 타입을 알 수 있다.
+
+  > console.log(typeof 'hello world!');
+  >
+  > console.log(typeof 123);
+  >
+  > console.log(typeof true);
+  >
+  > console.log(typeof undefined);
+  >
+  > console.log(typeof null);
+  >
+  > console.log(typeof {});
+  >
+  > console.log(typeof []);
+  >
+  > **(string / number / boolean / object 등)**
+
+- > function getType(data) {
+  >
+  >  return Object.prototype.toString.call(data).slice(8, -1)
+  >
+  > }
+  >
+  > console.log(getType(123))
+  >
+  > console.log(getType(false))
+  >
+  > console.log(getType(null))
+  >
+  > console.log(getType({}))
+  >
+  > console.log(getType([]))
+
+  
+
+
+
+export default function getType(data) {
+
+ return Object.prototype.toString.call(data).slice(8, -1)
+
+}
+
+> **export(내보내기)** / getType라는 자바스크립트 파일에서  getType이라는 함수를 파일 밖으로 내보내기를 할 수 있는 것이고,   default라는 키워드를 붙였기 때문에 이렇게 정의된 함수가 getType이라는 자바스크립트 파일에 가장 기본적인 형태의 내보내지는 일종의 함수 데이터라고 선언하는 것.
+
+
+
+> **import(가져오기)**
+
+
+
+
+
+### const(재활당이 불가능함) / let(할당 할 수 있음)
+
+> // 산술 연산자(arithmetic operator)
+>
+> console.log( 1 + 2 )
+>
+> console.log( 5 - 7 )
+>
+> console.log( 3 * 4 )
+>
+> console.log( 10 / 2 )
+>
+> console.log(7 % 5 )
 >
 > 
-> 
+>
+> // 할당 연산자 (assignment operator)
+>
+> let a = 2 
+>
+> // a = a + 1
+>
+> a += 1
+>
+> console.log(a)
